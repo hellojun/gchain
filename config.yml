@@ -1,0 +1,66 @@
+version: 1
+accounts:
+- name: admin
+  coins:
+  - 10000000cgt
+  mnemonic: october pride genuine harvest reunion sight become tuna kingdom punch
+    girl lizard cat crater fee emotion seat test output safe volume caught design
+    soft
+- name: alice
+  coins:
+  - 1000cgt
+  mnemonic: sugar narrow update three surround cupboard vital vapor fabric city father
+    toe tumble call element certain lava nose sponsor unaware code combine whale muscle
+- name: bob
+  coins:
+  - 1200cgt
+  mnemonic: mammal knife face mechanic short balance toe raven armor asset grass wing
+    crew quit arena purchase lawsuit scene style fork gauge they bottom mammal
+- name: tony
+  coins:
+    - 1500cgt
+  mnemonic: recipe swallow width erode tunnel army abstract lend pottery twist 
+    excite panic guide mind churn lazy garlic equip grab lonely sign solution deer buzz
+- name: jimmy
+  coins:
+    - 1800cgt
+  mnemonic: negative add about acoustic car scissors virus bubble fortune club board 
+    artwork struggle slow call weird poet forest unknown tired injury fiscal symptom suggest
+faucet:
+  name: admin
+  coins:
+  - 100cgt
+client:
+  typescript:
+    path: ts-client
+  composables:
+    path: vue/src/composables
+  openapi:
+    path: docs/static/openapi.yml
+genesis:
+  app_state:
+    crisis:
+      constant_fee:
+        denom: cgt
+    gov:
+      deposit_params:
+        min_deposit:
+        - amount: "50"
+          denom: cgt
+    mint:
+      params:
+        inflation_max: "0.000000000000000000"
+        inflation_min: "0.000000000000000000"
+        mint_denom: cgt
+    staking:
+      params:
+        bond_denom: cgt
+    swap:
+      params:
+        admin: cgt12ltvts09ga3gj32hsmnwq922ze0gmk4t6vhwne
+        commissionRate: "0.050000000000000000"
+validators:
+- name: admin
+  bonded: 1000000cgt
+  config:
+    moniker: node0
